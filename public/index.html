@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
+    <script src="https://unpkg.com/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
+
     <div class="cursor" id="cursor"></div>
     <div class="cyber-grid"></div> <div class="bg-glow"></div>
 
@@ -47,6 +49,30 @@
                 <span class="stat-value">OPERATIONAL</span>
             </div>
         </div>
+
+        <section class="compatibility-notice fade-in">
+            <div class="notice-header">
+                <span class="icon">ℹ️</span>
+                <h3>Connection Constraints</h3>
+            </div>
+            <div class="notice-grid">
+                <div class="notice-card">
+                    <h4>Browser Extension (Desktop)</h4>
+                    <p>For a native experience, ensure you are using a supported browser with the MetaMask extension installed:</p>
+                    <ul class="browser-list">
+                        <li>Google Chrome</li>
+                        <li>Mozilla Firefox</li>
+                        <li>Brave</li>
+                        <li>Microsoft Edge</li>
+                        <li>Opera</li>
+                    </ul>
+                </div>
+                <div class="notice-card">
+                    <h4>Barcode Bridge (Any Device)</h4>
+                    <p>If you are on Safari or a mobile device without an extension, select <strong>WalletConnect</strong> during login to scan a QR code with your mobile wallet app (MetaMask, Trust Wallet, etc.).</p>
+                </div>
+            </div>
+        </section>
 
         <section class="features-section fade-in">
             <div class="feature-card interactable">

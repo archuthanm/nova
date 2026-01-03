@@ -238,3 +238,52 @@ h1, h2, h3, .font-mono {
 .feature-card .icon { font-size: 2rem; margin-bottom: 1rem; }
 .feature-card h3 { font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem; color: #fff; }
 .feature-card p { color: #888; font-size: 0.9rem; line-height: 1.5; }
+
+.compatibility-notice {
+    margin: 4rem auto;
+    max-width: 1000px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.notice-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.notice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.notice-card h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.browser-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-size: 0.85rem;
+    color: var(--text-mute);
+}
+
+.browser-list li::before {
+    content: "•";
+    color: var(--primary);
+    margin-right: 0.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .notice-grid { grid-template-columns: 1fr; }
+}
