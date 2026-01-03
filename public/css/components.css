@@ -1,0 +1,169 @@
+/* =========================================
+1. NAVIGATION BAR
+========================================= */
+
+   nav {
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.btn-nav {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    background: var(--primary);
+    color: #000;
+    border-color: var(--primary);
+}
+
+
+/* =========================================
+2. HERO SECTION (Landing Page)
+========================================= */
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 6vw;
+    line-height: 1;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, #888);
+    background-clip: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cta-btn {
+    margin-top: 2rem;
+    padding: 1.5rem 3rem;
+    font-size: 1rem;
+    background: var(--primary);
+    color: #000;
+    border: none;
+    font-weight: 700;
+    display: inline-block;
+}
+
+
+/* =========================================
+3. DASHBOARD LAYOUT (Structure)
+========================================= */
+
+/* Controls the Sidebar + Main Content structure */
+.dash-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    border-right: 1px solid var(--border);
+    background: rgba(0,0,0,0.3);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main-view {
+    padding: 3rem;
+    overflow-y: auto;
+}
+
+/* --- Sidebar Menu Items --- */
+.menu-item {
+    padding: 0.8rem 1rem;
+    color: var(--text-mute);
+    font-family: 'Space Grotesk';
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.menu-item:hover, .menu-item.active {
+    background: var(--glass);
+    color: var(--primary);
+}
+
+
+/* =========================================
+4. DASHBOARD COMPONENTS (Cards & Grid)
+========================================= */
+
+.dash-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+}
+
+.card h3 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: var(--text-mute);
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+5. TICKER (Footer Animation)
+========================================= */
+
+.marquee-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid var(--border);
+    background: #000;
+    padding: 0.8rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+
+.ticker-item {
+    display: inline-block;
+    margin: 0 2rem;
+    font-family: 'Space Grotesk';
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
