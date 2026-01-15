@@ -6,59 +6,79 @@
     <title>NOVA | Real-Time Wealth</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
     <script src="https://unpkg.com/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
 
     <div class="cursor" id="cursor"></div>
-    <div class="cyber-grid"></div> <div class="bg-glow"></div>
+    <div class="scanlines"></div>
+    <div class="cyber-grid"></div> 
+    <div class="bg-glow"></div>
 
     <nav>
-        <div class="logo interactable glitch" data-text="NOVA.">NOVA<span>.</span></div>
-        <button id="btn-connect" class="btn-nav interactable">Connect Wallet</button>
+        <div class="logo interactable glitch" data-text="NOVA_SYSTEMS">NOVA</div>
+        <button id="btn-connect" class="btn-nav interactable">
+            <span class="btn-glitch">Connect Wallet</span>
+        </button>
     </nav>
 
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="badge fade-in">SYSTEM ONLINE</div>
+                <div class="badge fade-in">
+                    <span class="blink">●</span> SYSTEM ONLINE
+                </div>
                 
                 <h1 class="scramble-text fade-in" data-value="ALGORITHMIC DOMINANCE">ALGORITHMIC<br>DOMINANCE</h1>
                 
-                <p class="fade-in">Institutional-grade dashboard. Zero latency.</p>
-                <a href="dashboard.html" class="cta-btn interactable fade-in">ENTER TERMINAL</a>
-            </div>
-
-            <div class="marquee-container">
-                <div class="marquee-content" id="ticker-track"></div>
+                <p class="fade-in subtext">Institutional-grade dashboard. Zero latency execution.</p>
             </div>
         </section>
 
-        <div class="stats-bar fade-in">
-            <div class="stat-item">
-                <span class="stat-label">NETWORK</span>
-                <span class="stat-value" style="color:#00ff9d">MAINNET</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">LATENCY</span>
-                <span class="stat-value">12ms</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">STATUS</span>
-                <span class="stat-value">OPERATIONAL</span>
+        <div class="stats-container fade-in">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label">NETWORK</span>
+                    <span class="stat-value neon-text">MAINNET</span>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-item">
+                    <span class="stat-label">STATUS</span>
+                    <span class="stat-value">OPERATIONAL</span>
+                </div>
             </div>
         </div>
+
+        <section class="features-section fade-in">
+            <div class="feature-card interactable">
+                <div class="card-glow"></div>
+                <div class="icon">⚡</div>
+                <h3>Real-Time Data</h3>
+                <p>Live price feeds directly from the mempool. Millisecond precision.</p>
+            </div>
+            <div class="feature-card interactable">
+                <div class="card-glow"></div>
+                <div class="icon">🔒</div>
+                <h3>Non-Custodial</h3>
+                <p>Your keys, your crypto. Smart contract architecture ensures total sovereignty.</p>
+            </div>
+            <div class="feature-card interactable">
+                <div class="card-glow"></div>
+                <div class="icon">📊</div>
+                <h3>Deep Analytics</h3>
+                <p>Advanced charting with on-chain volume analysis and whale tracking.</p>
+            </div>
+        </section>
 
         <section class="compatibility-notice fade-in">
             <div class="notice-header">
                 <span class="icon">ℹ️</span>
-                <h3>Connection Constraints</h3>
+                <h3>Connection Protocol</h3>
             </div>
             <div class="notice-grid">
                 <div class="notice-card">
-                    <h4>Browser Extension (Desktop)</h4>
-                    <p>For a native experience, ensure you are using a supported browser with the MetaMask extension installed:</p>
+                    <h4>Desktop Bridge</h4>
+                    <p>Native experience via Web3 injection.</p>
                     <ul class="browser-list">
                         <li>Google Chrome</li>
                         <li>Mozilla Firefox</li>
@@ -68,33 +88,20 @@
                     </ul>
                 </div>
                 <div class="notice-card">
-                    <h4>Barcode Bridge (Any Device)</h4>
-                    <p>If you are on Safari or a mobile device without an extension, select <strong>WalletConnect</strong> during login to scan a QR code with your mobile wallet app (MetaMask, Trust Wallet, etc.).</p>
+                    <h4>Mobile Relay</h4>
+                    <p>WalletConnect V2 protocol supported for remote signing.</p>
                 </div>
             </div>
         </section>
-
-        <section class="features-section fade-in">
-            <div class="feature-card interactable">
-                <div class="icon">⚡</div>
-                <h3>Real-Time Data</h3>
-                <p>Live price feeds directly from the chain.</p>
+        
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="ticker-item">BTC $68,420 /// ETH $3,890 /// SOL $145 /// LINK $18.50 /// BTC $68,420 /// ETH $3,890 /// SOL $145 /// LINK $18.50</span>
             </div>
-            <div class="feature-card interactable">
-                <div class="icon">🔒</div>
-                <h3>Non-Custodial</h3>
-                <p>Your keys, your crypto. We never hold funds.</p>
-            </div>
-            <div class="feature-card interactable">
-                <div class="icon">📊</div>
-                <h3>Deep Analytics</h3>
-                <p>Advanced charting and portfolio tracking.</p>
-            </div>
-        </section>
+        </div>
     </main>
 
     <script type="module" src="js/app.js"></script>
-
     <script>
         const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         let interval = null;
